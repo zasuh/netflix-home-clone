@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaSistrix } from "react-icons/fa";
 
 const NavbarOuterWrapper = styled.header`
 	background: black;
-	margin: 0 0 1.45rem 0;
 `
 
 const NavbarInnerWrapper = styled.div`
@@ -13,13 +13,26 @@ const NavbarInnerWrapper = styled.div`
 `
 
 const NavbarTitle = styled.h1`
+  display: inline-block;
   margin: 0;
   color: #E50914;
 `
 
-const Browse = styled.span`
-  text-align: center;
+const Browse = styled.div`
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
   color: white;
+  padding: 0 0 0 1rem;
+  margin: 0;
+`
+
+const Icons = styled.div`
+  display: inline-block;
+  color: white;
+  float: right;
+  padding: 0 0 0 1rem;
+  margin: 0;
 `
 
 const Navbar: React.FC = () => {
@@ -28,6 +41,9 @@ const Navbar: React.FC = () => {
       <NavbarInnerWrapper>
         <NavbarTitle>Netflix Clone</NavbarTitle>
         <Browse>Browse</Browse>
+        <Icons>
+          <FaSistrix />
+        </Icons>
       </NavbarInnerWrapper>
     </NavbarOuterWrapper>
   );
