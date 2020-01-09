@@ -10,11 +10,16 @@ const NavbarInnerWrapper = styled.div`
 	margin: 0 auto;
 	max-width: 960;
 	padding: 1rem 1rem;
-	color: #E50914;
 `
 
 const NavbarTitle = styled.h1`
   margin: 0;
+  color: #E50914;
+`
+
+const Browse = styled.span`
+  text-align: center;
+  color: white;
 `
 
 const Navbar: React.FC = () => {
@@ -22,6 +27,7 @@ const Navbar: React.FC = () => {
     <NavbarOuterWrapper>
       <NavbarInnerWrapper>
         <NavbarTitle>Netflix Clone</NavbarTitle>
+        <Browse>Browse</Browse>
       </NavbarInnerWrapper>
     </NavbarOuterWrapper>
   );
