@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavbarDropdown } from './navbar-dropdown';
 import { MdSearch, MdNotificationsNone } from "react-icons/md";
 
 const NavbarOuterWrapper = styled.header`
@@ -57,6 +58,7 @@ const Navbar: React.FC = () => {
           <h3>Kids</h3>
           <h3>DVD</h3>
           <MdNotificationsNone size="1.5em" />
+          <NavbarDropdown />
         </ContentRight>
       </NavbarInnerWrapper>
     </NavbarOuterWrapper>
