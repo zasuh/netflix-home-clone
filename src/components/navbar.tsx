@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavbarDropdown from './navbar-dropdown';
+import NavbarDropdown from './NavbarDropdown';
 import { MdSearch, MdNotificationsNone } from "react-icons/md";
 
 const NavbarOuterWrapper = styled.header`
