@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavbarDropdown from './NavbarDropdown';
+import Browse from './Browse';
 import { MdSearch, MdNotificationsNone } from "react-icons/md";
 
 const NavbarOuterWrapper = styled.header`
@@ -19,7 +20,7 @@ const NavbarTitle = styled.h1`
   color: #E50914;
 `
 
-const Browse = styled.h3`
+const BrowseWindow = styled(Browse)`
   position: relative;
   bottom: 2px;
   display: inline-block;
@@ -52,7 +53,7 @@ const Navbar: React.FC = () => {
     <NavbarOuterWrapper>
       <NavbarInnerWrapper>
         <NavbarTitle>Netflix Clone</NavbarTitle>
-        <Browse>Browse</Browse>
+        <BrowseWindow />
         <ContentRight>
           <MdSearch size="1.5em" />
           <h3>Kids</h3>
