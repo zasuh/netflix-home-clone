@@ -13,7 +13,7 @@ const DropdownSelect = styled.div`
   background-color: black;
   color: white;
   border: solid black 1px;
-  button {
+  div {
     display: block;
     margin: 10px 0 10px 0;
     background-color: black;
@@ -48,9 +48,18 @@ const NavbarDropdown: React.FC = () => {
       <DropdownTriangle></DropdownTriangle>
       {menu ? (
         <DropdownSelect>
-          <button>Item1</button>
-          <button>Item2</button>
-          <button>Item3</button>
+          <div>
+            <img src="profile" alt=""/>
+            <p>User 1</p>
+          </div>
+          <div>
+            <img src="profile" alt=""/>
+            <p>User 2</p>
+          </div>
+          <div>
+            <img src="profile" alt=""/>
+            <p>User 3</p>
+          </div>
         </DropdownSelect>
       ) : null }
     </Dropdown>

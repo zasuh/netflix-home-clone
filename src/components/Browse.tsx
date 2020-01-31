@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import BrowseContent from './BrowseContent';
 
 const BrowseWrapper = styled.div`
   display: inline-block;
@@ -14,7 +15,7 @@ const BrowseTitle = styled.h3`
 const BrowseWindow = styled.div`
   position: absolute;
   left: 230px;
-  width: 500px;
+  width: 400px;
   height: 300px;
   background-color: black;
   color: white;
@@ -28,7 +29,7 @@ const Browse: React.FC = () => {
       <BrowseTitle>Browse</BrowseTitle>
       {open ? (
         <BrowseWindow>
-          Hello
+          <BrowseContent />
         </BrowseWindow>
       ) : null}
     </BrowseWrapper>
