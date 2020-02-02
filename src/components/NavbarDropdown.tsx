@@ -40,6 +40,19 @@ const ProfileImage = styled.img`
   padding: 0 5px 0 0;
 `
 
+const ProfileImageDropdown = styled.img`
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 0 5px 0 0;
+`
+
+const DropdownProfiles = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5px;
+`
+
 const NavbarDropdown: React.FC = () => {
   const [menu, setMenu] = useState(false);
   return (
@@ -48,18 +61,14 @@ const NavbarDropdown: React.FC = () => {
       <DropdownTriangle></DropdownTriangle>
       {menu ? (
         <DropdownSelect>
-          <div>
-            <img src="profile" alt=""/>
+          <DropdownProfiles>
+            <ProfileImageDropdown src={profile} alt="Profile 1"/>
+            <ProfileImageDropdown src={profile} alt="Profile 2"/>
+            <ProfileImageDropdown src={profile} alt="Profile 3"/>
             <p>User 1</p>
-          </div>
-          <div>
-            <img src="profile" alt=""/>
             <p>User 2</p>
-          </div>
-          <div>
-            <img src="profile" alt=""/>
             <p>User 3</p>
-          </div>
+          </DropdownProfiles>
         </DropdownSelect>
       ) : null }
     </Dropdown>

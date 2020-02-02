@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavbarDropdown from './NavbarDropdown';
-import Browse from './Browse';
 import { MdSearch, MdNotificationsNone } from "react-icons/md";
+import { FaGift } from "react-icons/fa";
 
 const NavbarOuterWrapper = styled.header`
 	background: black;
@@ -20,7 +20,7 @@ const NavbarTitle = styled.h1`
   color: #E50914;
 `
 
-const BrowseWindow = styled(Browse)`
+const ContentLeft = styled.h3`
   position: relative;
   bottom: 2px;
   display: inline-block;
@@ -53,11 +53,14 @@ const Navbar: React.FC = () => {
     <NavbarOuterWrapper>
       <NavbarInnerWrapper>
         <NavbarTitle>Netflix Clone</NavbarTitle>
-        <BrowseWindow />
+        <ContentLeft>Home</ContentLeft>
+        <ContentLeft>TV Shows</ContentLeft>
+        <ContentLeft>Movies</ContentLeft>
+        <ContentLeft>Latest</ContentLeft>
+        <ContentLeft>My List</ContentLeft>
         <ContentRight>
           <MdSearch size="1.5em" />
-          <h3>Kids</h3>
-          <h3>DVD</h3>
+          <FaGift size="1.5em" />
           <MdNotificationsNone size="1.5em" />
           <NavbarDropdown />
         </ContentRight>
