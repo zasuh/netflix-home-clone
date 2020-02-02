@@ -26,7 +26,7 @@ const Browse: React.FC = () => {
   const [open, setOpen] = useState(false);
   return (
     <BrowseWrapper onClick={() => {setOpen(!open)}}>
-      <BrowseTitle>Browse</BrowseTitle>
+      <BrowseTitle>Movies</BrowseTitle>
       {open ? (
         <BrowseWindow>
           <BrowseContent />
