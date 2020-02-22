@@ -53,6 +53,15 @@ const DropdownProfiles = styled.div`
   grid-gap: 5px;
 `
 
+const ProfileName = styled.p`
+  display: contents;
+  padding: 0 0 5px 0;
+`
+
+const DropdownItemWrapper = styled.div`
+  padding: 5px 0 2px 0;
+`
+
 const NavbarDropdown: React.FC = () => {
   const [menu, setMenu] = useState(false);
   return (
@@ -62,13 +71,24 @@ const NavbarDropdown: React.FC = () => {
       {menu ? (
         <DropdownSelect>
           <DropdownProfiles>
-            <ProfileImageDropdown src={profile} alt="Profile 1"/>
-            <ProfileImageDropdown src={profile} alt="Profile 2"/>
-            <ProfileImageDropdown src={profile} alt="Profile 3"/>
-            <p>User 1</p>
-            <p>User 2</p>
-            <p>User 3</p>
+            <DropdownItemWrapper>
+              <ProfileImageDropdown src={profile} alt="Profile 1"/>
+              <ProfileName>User 1</ProfileName>
+            </DropdownItemWrapper>
+            <DropdownItemWrapper>
+              <ProfileImageDropdown src={profile} alt="Profile 1"/>
+              <ProfileName>User 2</ProfileName>
+            </DropdownItemWrapper>
+            <DropdownItemWrapper>
+              <ProfileImageDropdown src={profile} alt="Profile 1"/>
+              <ProfileName>User 3</ProfileName>
+            </DropdownItemWrapper>
           </DropdownProfiles>
+          <p>Manage Profiles</p>
+          <hr />
+          <p>Account</p>
+          <p>Help Center</p>
+          <p>Sign Out of Netflix</p>
         </DropdownSelect>
       ) : null }
     </Dropdown>
