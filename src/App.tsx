@@ -26,6 +26,7 @@ const ImageHeader = styled.img`
   left: 0;
   width: 1905px;
   height: 1000px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 `
 
 const ImageLogo = styled.img`
