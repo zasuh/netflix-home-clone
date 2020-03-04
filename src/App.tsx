@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
+import FirstRow from './components/FirstRow';
 import './App.css';
 
 import BOJ from './assets/bojack3.jpg';
@@ -70,6 +71,12 @@ const ButtonWrapper = styled.div`
   left: 50px;
 `
 
+const FirstContentRow = styled(FirstRow)`
+  position: absolute;
+  top: 600px;
+  left: 50px;
+`
+
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -81,8 +88,9 @@ const App: React.FC = () => {
         <ShowDesc>He's a half-horse, half-man, has-been TV star who drinks a bit too much. He'r really got a lot going right now.</ShowDesc>
         <ButtonWrapper>
           <HeaderButton href="something">Watch Now</HeaderButton>
-          <HeaderButton href="something">Add To List</HeaderButton>
+          <HeaderButton href="something">More info</HeaderButton>
         </ButtonWrapper>
+        <FirstContentRow />
       </ImageWrapper>
     </div>
   );
