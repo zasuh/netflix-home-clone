@@ -73,8 +73,8 @@ const ButtonWrapper = styled.div`
 
 const FirstContentRow = styled(FirstRow)`
   position: absolute;
-  top: 600px;
-  left: 50px;
+  top: 750px;
+  left: 20px;
 `
 
 const App: React.FC = () => {
