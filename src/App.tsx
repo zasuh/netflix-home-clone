@@ -11,14 +11,6 @@ const ImageWrapper = styled.div`
   position: relative;
   top: 0;
   left: 0;
-
-  h3 {
-    position: absolute;
-    top: 270px;
-    left: 50px;
-    max-width: 600px;
-    color: white;
-  }
 `
 
 const ImageHeader = styled.img`
@@ -71,10 +63,20 @@ const ButtonWrapper = styled.div`
   left: 50px;
 `
 
-const FirstContentRow = styled(FirstRow)`
+const Watch = styled.h3`
   position: absolute;
-  top: 750px;
-  left: 20px;
+  top: 270px;
+  left: 50px;
+  max-width: 600px;
+  color: white;
+`
+
+const WatchNext = styled.h3`
+  position: absolute;
+  top: 680px;
+  left: 50px;
+  max-width: 600px;
+  color: white;
 `
 
 const App: React.FC = () => {
@@ -84,13 +86,14 @@ const App: React.FC = () => {
       <ImageWrapper>
         <ImageHeader src={BOJ} alt="Bojack Horseman on balcony"/>
         <ImageLogo src={LOGO} alt="Bojack Horseman logo"/>
-        <h3>Watch the final episodes now</h3>
+        <Watch>Watch the final episodes now</Watch>
         <ShowDesc>He's a half-horse, half-man, has-been TV star who drinks a bit too much. He'r really got a lot going right now.</ShowDesc>
         <ButtonWrapper>
           <HeaderButton href="something">Watch Now</HeaderButton>
           <HeaderButton href="something">More info</HeaderButton>
         </ButtonWrapper>
-        <FirstContentRow />
+        <WatchNext>Watch next</WatchNext>
+        <FirstRow />
       </ImageWrapper>
     </div>
   );

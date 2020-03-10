@@ -21,6 +21,7 @@ const PreviewImage = styled.img`
   width: 450px;
 `
 
+
 const FirstRow: React.FC = () => {
   return (
     <Wrapper>
