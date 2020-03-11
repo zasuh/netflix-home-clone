@@ -23,9 +23,12 @@ const PreviewImage = styled.img`
 
 
 const FirstRow: React.FC = () => {
+  function imageClick(){
+    console.log('Click')
+  }
   return (
     <Wrapper>
-      <PreviewImage src={B99} alt="Brooklyn 99 wallpaper"/>
+      <PreviewImage src={B99} onClick={imageClick()} alt="Brooklyn 99 wallpaper"/>
       <PreviewImage src={CAS} alt="Castlevania wallpaper"/>
       <PreviewImage src={ST} alt="Stranger Things wallpaper"/>
       <PreviewImage src={MR} alt="Mr Robot wallpaper"/>
